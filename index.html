@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaustubh Tilekar - LinkedIn Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      /* Custom styles to enhance Tailwind defaults and mimic LinkedIn aesthetics */
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f4f2ee; /* Light LinkedIn-like background */
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1024px; /* Slightly wider for a professional feel */
+        margin: 0 auto;
+        padding: 1.5rem;
+      }
+
+      /* Main profile card styling */
+      .profile-card {
+        background-color: #fff;
+        border-radius: 0.75rem; /* Rounded corners */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+        margin-bottom: 1.5rem;
+        overflow: hidden; /* Ensures rounded corners apply to children */
+      }
+
+      /* Header background image */
+      .profile-header-bg {
+        background: linear-gradient(
+          135deg,
+          #0077b5,
+          #00a0dc
+        ); /* LinkedIn blue gradient */
+        height: 120px; /* Cover photo height */
+        position: relative;
+      }
+
+      /* Profile picture positioning */
+      .profile-picture-container {
+        position: absolute;
+        bottom: -60px; /* Overlaps background and content */
+        left: 1.5rem;
+        border: 4px solid #fff; /* White border around picture */
+        border-radius: 9999px; /* Circular */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      }
+
+      .profile-picture {
+        width: 120px;
+        height: 120px;
+        border-radius: 9999px;
+        object-fit: cover;
+      }
+
+      /* Content padding for sections */
+      .section-content {
+        padding: 1.5rem;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #0a66c2; /* LinkedIn blue */
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 0.5rem;
+      }
+
+      /* Experience/Education/Project item styling */
+      .item-card {
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border: 1px solid #e0e0e0;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      }
+
+      .item-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      .item-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #333;
+      }
+
+      .item-subtitle {
+        font-size: 1rem;
+        color: #555;
+        margin-top: 0.25rem;
+      }
+
+      .item-date {
+        font-size: 0.9rem;
+        color: #777;
+        margin-top: 0.25rem;
+      }
+
+      .skill-badge {
+        background-color: #e6e6e6; /* Light gray */
+        color: #333;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+        display: inline-block;
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      .skill-badge:hover {
+        background-color: #d4d4d4;
+      }
+
+      /* Typing effect specific styles */
+      #typed-text {
+        display: inline-block;
+        min-width: 10px; /* To prevent layout shift when empty */
+      }
+      .typing-cursor {
+        display: inline-block;
+        background-color: #333; /* Dark cursor */
+        width: 2px;
+        height: 1.2em; /* Matches font size of typed text */
+        margin-left: 3px;
+        animation: blink-caret 0.75s step-end infinite;
+      }
+      @keyframes blink-caret {
+        from,
+        to {
+          background-color: transparent;
+        }
+        50% {
+          background-color: #333;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-8">
+      <div class="profile-card">
+        <div class="profile-header-bg">
+          <img
+            src="https://unsplash.com/photos/the-sun-is-setting-over-the-ocean-water-VWPRO4xK5CI"
+            alt="Cover Photo"
+            class="w-full h-full object-cover"
+            onerror="this.src='https://unsplash.com/photos/the-sun-is-setting-over-the-ocean-water-VWPRO4xK5CI'"
+          />
+          <div class="profile-picture-container">
+            <img
+              src="https://placehold.co/120x120/cccccc/333333?text=KT"
+              alt="Kaustubh Tilekar Profile"
+              class="profile-picture"
+              onerror="this.src='https://placehold.co/120x120/cccccc/333333?text=KT'"
+            />
+          </div>
+        </div>
+        <div class="section-content pt-20 pb-4 relative">
+          <h1 class="text-3xl font-bold text-gray-800 mb-1">
+            Kaustubh Tilekar
+          </h1>
+          <p class="text-xl text-gray-700 mb-2">
+            <span id="typed-text"></span><span class="typing-cursor"></span>
+          </p>
+          <p class="text-gray-600 mb-4">Pune, Maharashtra, India</p>
+
+          <div class="flex flex-wrap gap-3 mb-4">
+            <a
+              href="mailto:kaustubht1237@gmail.com"
+              class="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded-full flex items-center transition duration-300"
+            >
+              <i class="fas fa-envelope mr-2"></i> Message
+            </a>
+            <a
+              href="tel:+917721917093"
+              class="border border-blue-700 text-blue-700 hover:bg-blue-50 hover:text-blue-800 font-semibold py-2 px-4 rounded-full flex items-center transition duration-300"
+            >
+              <i class="fas fa-phone-alt mr-2"></i> Call
+            </a>
+            <a
+              href="#"
+              class="border border-gray-400 text-gray-700 hover:bg-gray-100 font-semibold py-2 px-4 rounded-full flex items-center transition duration-300"
+            >
+              <i class="fas fa-ellipsis-h mr-2"></i> More
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="section-content">
+          <h2 class="section-title">About</h2>
+          <p class="text-gray-700">
+            Experienced JAVA Full Stack Developer with 3+ Years in software
+            development. Specializing in WEB development using Angular, Java
+            with Spring Boot, and MySQL, delivering a 25-30% performance boost.
+            Collaborate effectively with cross-functional teams and seeking a
+            role where my skills and expertise can be fully utilized and proven
+            to be an asset to the company.
+          </p>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="section-content">
+          <h2 class="section-title">Experience</h2>
+          <div class="item-card">
+            <h3 class="item-title">Java Developer</h3>
+            <p class="item-subtitle">Dienstech Limited, Pune (TCS)</p>
+            <p class="item-date">Jan 2025 - Feb 2025</p>
+            <ul class="list-disc list-inside text-gray-700 mt-2">
+              <li>
+                Engineered and deployed RESTful APIs using Java and Spring Boot,
+                optimizing database interactions with SQL queries, resulting in
+                a 30% acceleration in data retrieval efficiency for critical
+                application workflows.
+              </li>
+            </ul>
+          </div>
+          <div class="item-card">
+            <h3 class="item-title">
+              Software Engineer (Java Full Stack Developer)
+            </h3>
+            <p class="item-subtitle">I SASH It Solutions, Pune</p>
+            <p class="item-date">Jul 2021 - Dec 2024</p>
+            <ul class="list-disc list-inside text-gray-700 mt-2">
+              <li>
+                Created high-performing Web applications using Angular, Java,
+                and Spring Boot and enhanced the database performance through
+                MySQL, accelerating its efficiency by 30%.
+              </li>
+              <li>
+                Optimized RestAPIs in Java 8 using cyclomatic and cognitive
+                complexity metrics, reducing execution time by 40%.
+              </li>
+              <li>
+                Designed RESTful services to utilizing Gateway, Eureka, and
+                authentication components, improving system scalability by 40%
+                and eliminating downtime by 20%.
+              </li>
+              <li>
+                Developed and styled Interactive Angular Components & layouts
+                using Angular, Bootstrap and CSS streamlining development by
+                30-35% boilerplate code while enhancing UI/UX.
+              </li>
+              <li>
+                Managed data storage operations with MariaDB, maintaining a
+                99.9% uptime rate for critical data assets.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="section-content">
+          <h2 class="section-title">Skills</h2>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-badge">Java</span>
+            <span class="skill-badge">Spring Boot</span>
+            <span class="skill-badge">Angular</span>
+            <span class="skill-badge">MySQL</span>
+            <span class="skill-badge">HTML</span>
+            <span class="skill-badge">Basic CSS</span>
+            <span class="skill-badge">Bootstrap</span>
+            <span class="skill-badge">API</span>
+            <span class="skill-badge">Spring Data JPA</span>
+            <span class="skill-badge">RESTful Web Services</span>
+            <span class="skill-badge">Microservices</span>
+            <span class="skill-badge">Maven</span>
+            <span class="skill-badge">OOPS</span>
+            <span class="skill-badge">Collection Framework</span>
+            <span class="skill-badge">Exception Handling</span>
+            <span class="skill-badge">Bitbucket</span>
+            <span class="skill-badge">GIT</span>
+            <span class="skill-badge">Postman</span>
+            <span class="skill-badge">Junit</span>
+            <span class="skill-badge">Spring Cloud</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="section-content">
+          <h2 class="section-title">Projects</h2>
+          <div class="item-card">
+            <h3 class="item-title">Repair Technician</h3>
+            <p class="item-subtitle">
+              Tech Stack: Angular 10, Java, Spring Boot, MariaDB.
+            </p>
+            <p class="item-date">Feb 2023 - Dec 2024</p>
+            <ul class="list-disc list-inside text-gray-700 mt-2">
+              <li>
+                Built elevator maintenance application with technician tracking,
+                boosting operational efficiency by 40%.
+              </li>
+              <li>
+                Implemented real-time technician tracking with OpenStreetMap,
+                reducing web page load time by 30%.
+              </li>
+              <li>
+                Boosted field efficiency by 80% through activity-tracking
+                leaderboards.
+              </li>
+              <li>
+                Validated API performance using Postman and Swagger, achieving
+                99% accuracy in JSON output and decreasing API response errors
+                by 35%; findings addressed the three biggest causes of crashes.
+              </li>
+              <li>
+                Utilized HTTP Interceptors in Angular to centralize error
+                handling, logging, and authentication, enhancing application
+                security by 30% and reducing error resolution time by 40%.
+              </li>
+            </ul>
+          </div>
+          <div class="item-card">
+            <h3 class="item-title">Real-Time Energy Monitoring</h3>
+            <p class="item-subtitle">
+              Tech Stack: Angular 10, Java, Spring Boot, MariaDB.
+            </p>
+            <p class="item-date">Jul 2021 - Jan 2023</p>
+            <ul class="list-disc list-inside text-gray-700 mt-2">
+              <li>
+                Implemented a comprehensive energy monitoring system that
+                identified inefficiencies across key operations, achieving a
+                significant reduction in energy costs ranging from 15% to 25%
+                over a 12-month period.
+              </li>
+              <li>
+                Designed a dashboard for seamless energy data access, boosting
+                user engagement by 30%.
+              </li>
+              <li>
+                Analyzed energy reports to identify trends and recommend
+                actions, cutting overall costs by 15%.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="section-content">
+          <h2 class="section-title">Education</h2>
+          <div class="item-card">
+            <h3 class="item-title">M.C.A.</h3>
+            <p class="item-subtitle">IMS College Ahmednagar.</p>
+            <p class="item-date">2023</p>
+            <p class="text-gray-700 mt-2">Post Graduated with 7.88 CGPA.</p>
+          </div>
+          <div class="item-card">
+            <h3 class="item-title">B.C.A.</h3>
+            <p class="item-subtitle">New Arts College Ahmednagar.</p>
+            <p class="item-date">2021</p>
+            <p class="text-gray-700 mt-2">Passed with 79%.</p>
+          </div>
+        </div>
+      </div>
+
+      <footer class="text-center py-6 text-gray-600 text-sm">
+        <p>&copy; 2025 Kaustubh Tilekar. All rights reserved.</p>
+        <div class="mt-2 flex justify-center space-x-4">
+          <a
+            href="https://www.linkedin.com/in/kaustubh-tilekar-b5a0b720b/"
+            target="_blank"
+            class="text-blue-700 hover:text-blue-800 transition duration-300"
+            ><i class="fab fa-linkedin fa-lg"></i
+          ></a>
+          <a
+            href="https://github.com/KaustubhTilekar"
+            target="_blank"
+            class="text-gray-700 hover:text-gray-900 transition duration-300"
+            ><i class="fab fa-github fa-lg"></i
+          ></a>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // JavaScript for the typing effect on the headline
+      document.addEventListener("DOMContentLoaded", function () {
+        const typedTextElement = document.getElementById("typed-text");
+        const textToType = "Software Engineer";
+        let i = 0;
+        let typingSpeed = 100; // milliseconds per character
+
+        function typeWriter() {
+          if (i < textToType.length) {
+            typedTextElement.textContent += textToType.charAt(i);
+            i++;
+            setTimeout(typeWriter, typingSpeed);
+          }
+        }
+
+        typeWriter(); // Start the typing animation
+      });
+    </script>
+  </body>
+</html>
